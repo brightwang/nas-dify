@@ -1,0 +1,4 @@
+tailscale
+volumes/db
+volumes/redis
+.env
