@@ -285,7 +285,6 @@ services:
       interval: 1s
       timeout: 3s
       retries: 30
-
   tailscale:
     image: tailscale/tailscale:latest
     hostname: tailscale
@@ -300,6 +299,7 @@ services:
       - net_admin
       - sys_module
     restart: unless-stopped
+    network_mode: host
 
 networks:
   # create a network between sandbox, api and ssrf_proxy, and can not access outside.
